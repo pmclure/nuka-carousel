@@ -115,6 +115,10 @@ const Carousel = React.createClass({
     this.unbindEvents();
   },
 
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  },
+
   render() {
     var self = this;
     var children = React.Children.count(this.props.children) > 1 ? this.formatChildren(this.props.children) : this.props.children;
