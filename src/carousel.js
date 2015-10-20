@@ -49,7 +49,7 @@ const Carousel = React.createClass({
     framePadding: React.PropTypes.string,
     initialSlideHeight: React.PropTypes.number,
     initialSlideWidth: React.PropTypes.number,
-    initalSlideIndex: React.PropTypes.number,
+    initialSlideInde: React.PropTypes.number,
     slidesToShow: React.PropTypes.number,
     slidesToScroll: React.PropTypes.oneOfType([
       React.PropTypes.number,
@@ -66,7 +66,7 @@ const Carousel = React.createClass({
 
   getDefaultProps() {
     return {
-      initalSlideIndex: 0,
+      initialSlideIndex: 0,
       cellAlign: 'left',
       cellSpacing: 0,
       data: function() {},
@@ -86,7 +86,7 @@ const Carousel = React.createClass({
 
   getInitialState() {
     return {
-      currentSlide: this.props.initalSlideIndex,
+      currentSlide: this.props.initialSlideIndex,
       dragging: false,
       frameWidth: 0,
       left: 0,
